@@ -82,7 +82,6 @@ function countObjects (object) {
     }
 
 function deepFreeze (something) {
-
 }
     
 
