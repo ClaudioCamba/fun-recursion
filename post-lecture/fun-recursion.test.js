@@ -6,9 +6,20 @@ describe('reverseStr', () => {
         //Act
         const output = reverseStr('r')
         //Assertion
-    
-        
-        expect().toBe();
         expect(output).toEqual('r');
+    });
+    test('Should return reverse string with multiple characters', ()=>{
+        //Arrange
+        //Act
+        const output = reverseStr('hello')
+        //Assertion
+        expect(output).toEqual('olleh');
+    });
+    test('Should return reverse string with multiple characters and spaces', ()=>{
+        //Arrange
+        //Act
+        const output = reverseStr('katherine rules')
+        //Assertion
+        expect(output).toEqual('selur enirehtak');
     });
 });

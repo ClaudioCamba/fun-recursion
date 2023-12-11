@@ -1,18 +1,11 @@
 function reverseStr(string){
-    if (string.length < 1 ){
-        return 
-    }
-    if (string.length === 1){
-        return string[0]
-    }
-    
-    return string[string.length-1] + reverseStr(string)
+const reversedStr = [];
+
+for (let i = string.length-1; i !== -1; i--){
+    reversedStr.push(string[i]);
 }
 
-
-
-
-
-
+return reversedStr.join('');
+}
 
 module.exports = {reverseStr}
