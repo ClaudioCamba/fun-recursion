@@ -1,4 +1,4 @@
-const {reverseStr, sumDigits, fib, deepTotal, deepIncludes} = require('./fun-recursion')
+const {reverseStr, sumDigits, fib, deepTotal, deepIncludes, countObjects, deepFreeze} = require('./fun-recursion')
 
 describe('reverseStr', () => {
     test('Should reverse a string', ()=>{
@@ -100,7 +100,7 @@ describe('deepTotal', () => {
     });
 });
 
-describe.only('deepIncludes', () => {
+describe('deepIncludes', () => {
     test('It should take an array and return sum of array', ()=>{
         //Arrange
         //Act
@@ -114,5 +114,35 @@ describe.only('deepIncludes', () => {
         const output = deepIncludes(["toast", ["avocado", ["chilli flakes"]]], "avocado");
         //Assertion
         expect(output).toEqual(true);
+    });
+});
+
+describe('countObjects', () => {
+    test('Counts the number of objects in an arbiraily nested object', ()=>{
+        //Arrange
+        //Act
+        const output = countObjects({ a: 1 })
+        //Assertion
+        expect().toBe();
+        expect(output).toEqual(1);
+    });
+    test('Counts the number of objects in an arbiraily nested object', ()=>{
+        //Arrange
+        //Act
+        const output = countObjects({ a: { b: { c: 1 } } })
+        //Assertion
+        expect().toBe();
+        expect(output).toEqual(3);
+    });
+
+});
+
+describe.only('deepFreeze', () => {
+    test('takes an object and freezes it and all of its child objects meaning none of them can be mutated', ()=>{
+        //Arrange
+        //Act
+        //Assertion
+        expect().toBe();
+        expect().toEqual();
     });
 });

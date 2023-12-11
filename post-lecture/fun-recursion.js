@@ -67,5 +67,26 @@ function deepIncludes(arr,val) {
     if (sum === 0) return false
 }
 
+function countObjects (object) {
+    let count = 0; 
+    for (const key in object) {
+        
+        if (typeof object[key] === 'object') {
+            const element = object[key];
+             count+= countObjects(element)
+        }
+        if (typeof key !== 'object')
+            count++
+        }
+        return count
+    }
 
-module.exports = {reverseStr, sumDigits, fib, deepTotal, deepIncludes}
+function deepFreeze (something) {
+
+}
+    
+
+
+
+
+module.exports = {reverseStr, sumDigits, fib, deepTotal, deepIncludes, countObjects, deepFreeze}
